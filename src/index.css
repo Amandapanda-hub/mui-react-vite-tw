@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  overflow-x: hidden;
+  font-family: 'Museo';
+}
+
+#rssBlock, #rssBlockWhite {
+  left: 0;
+  height: fit-content;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+#rssBlock {
+  background: black;
+}
+
+#rssBlockWhite {
+  background: white;
+}
+
+.cnnContents, .cnnContentsSign {
+  width: 200%;
+  margin: 0 auto;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cnnContents {
+  font-size: 20vw; /* Responsive font-size */
+}
+
+.cnnContentsSign {
+  font-size: 5vw; /* Responsive font-size */
+}
+
+.marqueeStyle, .marqueeStyle2 {
+  display: inline-block;
+  width: 50%;
+}
+
+.marqueeStyle {
+  animation: scrolling-left1 20s linear infinite;
+}
+
+.marqueeStyle2 {
+  animation: scrolling-left1 20s linear infinite;
+  animation-delay: 10s;
+}
+
+@keyframes scrolling-left1 {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .cnnContents {
+    font-size: 25vw; /* Adjusted font-size */
+  }
+
+  .cnnContentsSign {
+    font-size: 3.5vw; /* Adjusted font-size */
+  }
+}
+
+
+/* Larger font size for screens smaller than 768px wide (this is just an example breakpoint) */
+@media (max-width: 768px) {
+  .cnnContentsSign {
+      font-size: 50px; /* adjust to your desired size */
+  }
+}
